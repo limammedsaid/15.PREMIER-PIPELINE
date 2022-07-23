@@ -4,17 +4,17 @@ pipeline {
         stage('clone') { 
             steps {
                 sh "rm -rf *" 
-                sh "git clone https://github.com/priximmo/jenkins-helloworld.git"
+                sh "git clone https://github.com/limammedsaid/15_PREMIER-PIPELINE.git"
             }
         }
         stage('build') { 
             steps {
-                sh "cd jenkins-helloworld/ && javac Main.java"
+                sh "cd 15_PREMIER-PIPELINE/ && javac Main.java"
             }
         }
         stage('run') { 
             steps {
-                sh " cd jenkins-helloworld/ && java Main"
+                sh " cd 15_PREMIER-PIPELINE && java Main"
             }
         }
     }
